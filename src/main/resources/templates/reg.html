@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+		th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<div class="container mt-2">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+					<h1 class="text-center card-header">Register Here !!</h1>
+					
+					<th:block th:if=${session.succMsg}>
+						<p class="text-center text-success fw-bold">[[${session.succMsg}]]</p>
+						<th:block th:text="${@commonServiceImpl.removeSessionMethod()}"></th:block>
+					</th:block>
+					
+						<div class="card-body">
+						<form action="/saveProduct" method="post">
+							<div class="mb-3">
+							<label>Product Name</label>
+								<input class="form-control" 
+							 name="productName"	type="text" placeholder="Enter Name Here" required="required"/>
+							</div>
+							
+							
+							<div class="mb-3">
+							<label>Quantity</label>
+								<input class="form-control" type="text" 
+								name ="quantity" placeholder="Enter Name Here" required="required"/>
+							</div>
+							
+							<div class="mb-3 text-center">
+								<button class="text-center btn btn-primary">Submit</button>
+							</div>
+						</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+</body>
+</html>

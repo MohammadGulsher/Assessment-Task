@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+		th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<section>
+			<div class="text-center mt-2 p-5">
+				<h1 class="fw-bold">Product DashBoard</h1>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 p-4 ">
+					<div class="card shadow-sm p-3 mb-5 bg-body rounded">
+						<div class="card-body text-center text-primary fw-3">
+						<i class="fa-solid fa-box-open fa-2x"></i>
+						<h4 class="text-center "><a href="/reg"
+						class="text-decoration-none">Add Order</a></h4>
+						<p>------------------</p>
+						</div>
+					</div>
+				</div>
+				
+					<div class="col-md-4 p-4 ">
+					<div class="card shadow-sm p-3 mb-5 bg-body rounded">
+						<div class="card-body text-center text-success fw-3">
+						<i class="fa-solid fa-box-open fa-2x"></i>
+						<h4 class="text-center "><a href="/show_Product"
+						class="text-decoration-none text-success">Show All Order</a></h4>
+						<p>------------------</p>
+						</div>
+					</div>
+				</div>
+				
+				
+				</div>
+			</div>
+	</section>
+</body>
+</html>
